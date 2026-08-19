@@ -1,0 +1,22 @@
+# Keep only the primary application source under version control.
+*.py
+!Measure_AI.py
+
+# Local captured photos and sample/test images.
+captured_photos/
+Test/
+
+# Generated visual debugging output and local input images.
+debug_*.jpg
+debug_*.jpeg
+debug_*.png
+IMG_*.JPG
+IMG_*.JPEG
+IMG_*.jpg
+IMG_*.jpeg
+
+# Local Python environments and IDE settings.
+.venv/
+.idea/
+__pycache__/
+*.py[cod]
