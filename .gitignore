@@ -20,3 +20,15 @@ IMG_*.jpeg
 .idea/
 __pycache__/
 *.py[cod]
+
+# Local tool configs (machine/user-specific, not app code).
+.mcp.json
+.claude/
+
+# Research paper deliverables (kept local only).
+Measure_AI_Research_Paper.docx
+Measure_AI_Research_Paper.pdf
+paper/
+
+# New model files not already tracked in history.
+hand_landmarker.task

@@ -10,12 +10,13 @@ These are the direct third-party libraries imported by the project scripts and t
 
 | Library | Version | Used for |
 | --- | --- | --- |
-| `opencv-python` | `5.0.0.93` | Webcam access, image processing, and display windows |
+| `PySide6` | `6.11.2` | The application window, canvas, and dialogs |
+| `opencv-python` | `5.0.0.93` | Webcam access and image processing |
 | `numpy` | `2.4.6` | Image and numeric array operations |
-| `mediapipe` | `1.0.1` | Pose-landmark detection for limb and height estimates |
+| `mediapipe` | `1.0.1` | Pose, hand, and face landmark detection |
 | `ultralytics` | `8.4.121` | YOLO person segmentation in `auto_measure.py` |
 
-`os`, `sys`, `math`, `time`, and `urllib.request` are Python standard-library modules and do not need installation.
+`os`, `sys`, `math`, `time`, `shutil`, and `urllib.request` are Python standard-library modules and do not need installation.
 
 ## Install
 
@@ -30,7 +31,7 @@ python -m pip install --upgrade pip
 Install the exact versions used in this environment:
 
 ```powershell
-python -m pip install opencv-python==5.0.0.93 numpy==2.4.6 mediapipe==1.0.1 ultralytics==8.4.121
+python -m pip install PySide6==6.11.2 opencv-python==5.0.0.93 numpy==2.4.6 mediapipe==1.0.1 ultralytics==8.4.121
 ```
 
 To run the main application:
@@ -39,4 +40,6 @@ To run the main application:
 python Measure_AI.py
 ```
 
-The `auto_measure.py` script additionally requires the included `yolov8n-seg.pt` model. The main application uses the included `pose_landmarker.task` model; if it is missing, it attempts to download it when first run.
+That opens the application window — there is no command-line menu.
+
+The `auto_measure.py` script additionally requires the included `yolov8n-seg.pt` model. The main application uses `pose_landmarker.task`, `face_landmarker.task`, and `hand_landmarker.task`; any that are missing are downloaded on first use.
